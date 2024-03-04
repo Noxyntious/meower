@@ -2,7 +2,7 @@
 helps you generate your meow mrrrp nya
 # features
 variable meow length  
-has a 50% (i think) chance to put a :3 at the end  
+has a 50% chance to put a :3 at the end  
 its fucking memory safe BITCH
 # usage
 meower (amount)  
