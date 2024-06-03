@@ -16,7 +16,7 @@ fn main() {
     let amount = args.count;
     let mut i: i32 = 0;
     let mut prevnum = 9999;
-    while i <= amount {
+    while i < amount {
         let mut num = rand::thread_rng().gen_range(0..meows.len());
         if num == prevnum {
             if num > 3 {
