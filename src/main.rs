@@ -10,7 +10,7 @@ struct Cli {
 }
 
 fn main() {
-    let meows = vec!["meow", "mrrrow", "mrrrp", "nyaaa", "nya", "mew", "meowwww"];
+    let meows = vec!["meow", "mrrrow", "mrrrp", "nyaaa", "nya", "mew", "meowwww", "prrp", "nyaaaaaaaaaa~"];
     let args = Cli::parse();
 
     let amount = args.count;
