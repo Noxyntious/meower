@@ -33,4 +33,5 @@ fn main() {
     if colonthree >= 5 {
         print!(":3");
     }
+    print!("\n");
 }
