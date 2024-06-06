@@ -10,7 +10,7 @@ struct Cli {
 }
 
 fn main() {
-    let meows = vec!["meow", "mrrrow", "mrrrp", "nyaaa", "nya", "mew", "meowwww", "prrp", "nyaaaaaaaaaa~"];
+    let meows = vec!["meow", "mrrrow", "mrrrp", "nyaaa", "nya", "mew", "meowwww", "prrp", "nyaaaaaaaaaa"];
     let args = Cli::parse();
 
     let amount = args.count;
@@ -33,4 +33,5 @@ fn main() {
     if colonthree >= 5 {
         print!(":3");
     }
+    print!("\n");
 }
