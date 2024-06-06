@@ -17,7 +17,7 @@ cargo install --git https://github.com/Noxyntious/meower.git
 ## usage
 
 ```
-meower <words>
+meower <amount>
 ```
 ```
 $ meower 10
