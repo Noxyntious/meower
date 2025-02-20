@@ -10,28 +10,36 @@ struct Cli {
 }
 
 fn main() {
-    let meows = vec!["meow", "maow", "mrrrow", "mrrrp", "nyaaa", "nya", "mew", "meowwww", "prrp", "nyaaaaaaaaaa"];
+    let meows = vec![
+        "meow",
+        "maow",
+        "mrrrow",
+        "mrrrp",
+        "nyaaa",
+        "nya",
+        "mew",
+        "meowwww",
+        "prrp",
+        "nyaaaaaaaaaa",
+    ];
     let args = Cli::parse();
 
     let amount = args.count;
-    let mut i: i32 = 0;
-    let mut prevnum = 9999;
-    while i < amount {
-        let mut num = rand::thread_rng().gen_range(0..meows.len());
-        if num == prevnum {
-            if num > 3 {
-                num = num - 1
-            } else if num < 3 {
-                num = num + 1
-            }
+    let mut available_indices: Vec<usize> = (0..meows.len()).collect();
+    let mut rng = rand::thread_rng();
+
+    for _ in 0..amount {
+        if available_indices.is_empty() {
+            available_indices = (0..meows.len()).collect();
         }
-        print!("{} ", meows[num]);
-        prevnum = num;
-        i = i + 1;
+
+        let index = rng.gen_range(0..available_indices.len());
+        let meow_index = available_indices.remove(index);
+        print!("{} ", meows[meow_index]);
     }
-    let colonthree = rand::thread_rng().gen_range(0..10);
-    if colonthree >= 5 {
+
+    if rng.gen_range(0..10) >= 5 {
         print!(":3");
     }
-    print!("\n");
+    println!();
 }
